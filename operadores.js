@@ -124,4 +124,57 @@ console.log("Op-10: !false => " + a)
 
 /**
  * Operadores de bits
+ * 1. AND
+ * 2. OR
+ * 3. NOT
+ * 4. XOR
+ * 5. Desplazamiento de ceros a la izquierda
+ * 6. Desplazamiento de ceros a la derecha
+ * 7. Desplazamiento a la derecha con cambio de signo
  */
+console.log("\nOperdores en Bits")
+a = 5 & 1   // 0101 & 0001
+console.log("Op-1: 0101 & 0001 => " + a) // 0001 o 1
+a = 5 | 1   // 0101 | 0001
+console.log("Op-2: 0101 | 0001 => " + a) // 0101 o 5
+a = 5      // ~0101
+console.log("Op-3: ~0101 => " + ~a)       // 1010 o 10
+a = 5 ^ 1   // 0101 ^ 0001
+console.log("Op-4: 0101 ^ 0001 => " + a) // 0100 o 4
+a = 5 << 1  // 0101 << 1
+console.log("Op-5: 0101 << 1 => " + a)   // 1010 o 10
+a = 5 >> 1  // 0101 >> 1
+console.log("Op-6: 0101 >> 1 => " + a)   // 0010 o 2
+a = 5 >>> 1 // 0101 >>> 1
+console.log("Op-7: 0101 >>> 1 => " + a)  // 0010 o 2
+
+/**
+ * Otras Operaciones
+ */
+// Colisionador Nulo
+console.log("\nColisionador de operadores nulos")
+a = (null || undefined) ?? "valor izquierdo"
+console.log("Nª1: (null || undefined) ?? 'valor izquierdo' => " + a)
+a = "valor derecho" ?? "valor izquierdo"
+console.log("Nª2: 'valor derecho' ?? 'valor izquierdo' => " + a)
+a = "valor derecho" ?? (null || undefined)
+console.log("Nª3: 'valor derecho' ?? (null || undefined) => " + a)
+
+// Operador Typeof
+console.log("\nIdentificador de valores")
+a = "string"
+console.log("Nª1: type of 'string' => " + typeof a)
+a = 5
+console.log("Nª2: type of 5 => " + typeof a)
+a = true
+console.log("Nª3: type of true => " + typeof a)
+a = []
+console.log("Nª4: type of [] => " + typeof a)
+a = {}
+console.log("Nª5: type of {} => " + typeof a)
+a = null
+console.log("Nª6: type of null => " + typeof a)
+a = NaN
+console.log("Nª7: type of NaN => " + typeof a)
+a = undefined
+console.log("Nª8: type of undefined => " + typeof a)
