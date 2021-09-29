@@ -28,8 +28,10 @@ console.log("\tSumar como texto intermedio: => La suma es " + sumar(a,b) + " uni
 /**
  * Propiedad de función:
  *      arguments
- *          función que retonar un arreglo con los argumentos
+ *          atributo que retonar un arreglo con los argumentos
  *          de la función utilizada
+ *      ...
+ *          atributo que retonar el resto de parametros
  */
 console.log("\nPropiedad: arguments de función declarada")
 let a1 = "\targumento 1",
@@ -43,6 +45,15 @@ function argumentos(a1,a2,a3){
 }
 console.log("\tPropiedad: arguments =>")
 argumentos(a1,a2,a3)
+
+console.log("\tPropiedad que retorna el resto de parametros en forma de un objeto")
+function multiplicar(multiplicador,...parametros){
+    return parametros.map(x => console.log("\t\t\t" + multiplicador + " * " + x + " = " + multiplicador*x))
+}
+
+console.log("\t\tNuméros multiplicados *2:")
+let arr = multiplicar(2,1,2,3);
+
 
 /**
  * Función anonima o función como expresión
